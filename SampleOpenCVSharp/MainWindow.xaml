@@ -1,0 +1,28 @@
+﻿<Window x:Class="SampleOpenCVSharp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SampleOpenCVSharp"
+        mc:Ignorable="d"
+        Title="SampleOpenCVSharp" Height="800" Width="1200" Closing="Window_Closing">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="190"></ColumnDefinition>
+                <ColumnDefinition Width="190"></ColumnDefinition>
+                <ColumnDefinition Width="190"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="btnOpen" Content="开启摄像头" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="42" Width="150" Click="btnOpen_Click"/>
+            <Button Grid.Column="1" x:Name="btnRecord" Content="开始录像" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="42" Width="150" Click="btnRecord_Click"/>
+            <Button Grid.Column="2" x:Name="btnPhoto" Content="截图" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="42" Width="150" Click="btnPhoto_Click" />
+            <TextBlock Grid.Column="3" x:Name="tbRecord" Text="" Foreground="Red" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Grid>
+        <Image Grid.Row="1" Name="imgPreview"/>
+    </Grid>
+</Window>
